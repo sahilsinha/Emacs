@@ -456,6 +456,7 @@ This variant of `rx' supports common python named REGEXPS."
               (set-match-data nil)))))
      (1 font-lock-variable-name-face nil nil))))
 
+  ;;(defconst python-syntax-propertize-function
 (defconst python-font-lock-syntactic-keywords
   ;; Make outer chars of matching triple-quote sequences into generic
   ;; string delimiters.  Fixme: Is there a better way?
@@ -2724,6 +2725,7 @@ if that value is non-nil."
        '(python-font-lock-keywords
          nil nil nil nil
          (font-lock-syntactic-keywords . python-font-lock-syntactic-keywords)))
+	 ;;(syntax-propertize-function . python-syntax-propertize-function)))
 
   (set (make-local-variable 'indent-line-function)
        #'python-indent-line-function)
